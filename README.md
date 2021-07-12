@@ -1,2 +1,2 @@
 # TSFloewrs
-Сайт (NodeJS + Express + HTML + SCSS + TypeScript + JavaScript) 
+Сайт (NodeJS + Express + HTML + CSS + SCSS + TypeScript + JavaScript) 
