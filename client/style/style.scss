@@ -1,0 +1,169 @@
+$osn_color: #2b2f42 ;
+/* - черту от ступы по умолчанию в chrome*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*и подчеркивания тоже*/
+a {
+  text-decoration: none;
+}
+/*header*/
+header {
+  position: fixed;
+  z-index: 101;
+
+
+  .header_title {
+  color: white;
+  font-size: 40px;
+  padding-top: 25px;
+  padding-left: 40px;
+  }
+
+  .header_content {
+     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    p{
+      color: white;
+      font-family: 'Oswald', sans-serif;
+      margin-top: 30px;
+    }
+    .start_section {
+      border: 1px solid white;
+      border-radius: 8px;
+
+    }
+  }
+
+  .header_mail {
+
+    .header_mail_border {
+      background: white;
+      width: 1px;
+      height: 100%;
+    }
+    .mail {
+      color: white;
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      margin-top: 36px;
+    }
+  }
+}
+/*main*/
+/*Главная*/
+.start_title {
+  margin-left: 160px;
+  margin-top: 300px;
+  color: $osn_color;
+  font-size: 30px;
+  position: absolute;
+  z-index: 100;
+  font-family: 'Oswald', sans-serif;
+}
+
+.background_img_1 {
+  width: 100%;
+  opacity:0.5;
+  -moz-opacity:0.8;
+  filter: alpha(opacity=80) black;
+  -khtml-opacity: 0.8;
+  background-color:#000;
+
+}
+/*Название секциий*/
+.section_title {
+  color: $osn_color;
+  font-family: 'Dancing Script', cursive;
+
+}
+
+/*О нас*/
+.about_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .txt_about {
+    background: $osn_color ;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 20px;
+    p{
+      padding: 20px;
+    }
+  }
+  .img_about {
+    width: 100%;
+  }
+}
+
+
+/*Товары*/
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .card {
+    border: 2px solid $osn_color ;
+    margin: 10px;
+    .card_img {
+      width: 100%;
+    }
+    .card_txt {
+      padding: 5px;
+      background: $osn_color ;
+      color: white;
+      font-family: 'Oswald', sans-serif;
+    }
+    .card_title {
+      font-size: 200%;
+    }
+    .card_description {
+      color: #cdcdcd;
+    }
+  }
+        }
+
+/*footer*/
+footer {
+    background: $osn_color ;
+    width: 100%;
+    .footer_content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .all_soc {
+        padding: 20px;
+        display: grid;
+        grid-auto-rows: 1fr 1fr;
+        .soc {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          .icon {
+            width: 40px;
+          }
+          .link {
+            color: white;
+            margin-left: -80%;
+            margin-top: 10px;
+          }
+        }
+      }
+      .pay {
+        width: 200px;
+        padding: 20px;
+        padding-top: 50px;
+      }
+                  }
+  /*Я*/
+  .author {
+    color: white;
+    font-size: 15px;
+    font-family: 'Dancing Script', cursive;
+    padding: 5px;
+  }
+}
+
+
+
+
+

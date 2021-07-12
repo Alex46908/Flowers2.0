@@ -1,0 +1,113 @@
+/*Вертска для телефонов */
+@media screen and  (min-width: 320px) {
+    header {
+        display: grid;
+        background: #2b2f42;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .header_mail {
+        display: none;
+
+    }
+    .header_content p{
+        font-size: 180%;
+        margin-left: 20px;
+        padding: 20px;
+    }
+    .about_info {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .product {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+    .link {
+        margin-left: -60%;
+    }
+        #carouselExampleControls {
+    width: 100%;
+    }
+}
+/*Верстка под планшеты*/
+
+@media  screen and  (min-width: 1000px) {
+    header {
+        display: grid;
+        background: #2b2f42;
+        width: 100%;
+
+        grid-template-columns: 1fr 1fr;
+    }
+    .header_mail {
+        display: none;
+
+    }
+    .header_content p{
+        font-size: 160%;
+    }
+    .about_info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .link {
+        margin-left: -80%;
+    }
+        #carouselExampleControls {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+    
+}
+/*Верстка под компы*/
+@media  screen and  (min-width: 1400px) {
+    header {
+        display: grid;
+        background: #2b2f42;
+        width: 100%;
+
+        grid-template-columns: 0.5fr 2fr 1fr;
+    }
+    .header_mail {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 1fr;
+
+    }
+    .header_content p{
+        font-size: 140%;
+    }
+    .about_info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        margin: 0;
+
+    }
+    .link {
+        margin-left: -80%;
+    }
+    #carouselExampleControls {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+}
