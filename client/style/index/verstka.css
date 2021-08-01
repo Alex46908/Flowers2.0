@@ -1,0 +1,44 @@
+/*Вертска для телефонов */
+
+@media screen and  (min-width: 320px) {
+    .start_title {
+        padding-top: 30px;
+        font-size: 140%;
+    }
+    main{
+        padding-top:260px;
+    }
+}
+/*Верстка под планшеты*/
+
+@media  screen and  (min-width: 1024px) {
+    .start_title{
+        padding-top: 0px;
+        font-size: 180%;
+    }
+    main{
+        padding-top:130px;
+    }
+}
+/*Верстка под компы*/
+
+@media  screen and  (min-width: 1440px) {
+    .start_title{
+        padding-top: 0px;
+        font-size: 200%;
+    }
+    main{
+        padding-top:160px;
+    }
+}
+/* Верстка под 4k мониторы*/
+
+@media  screen and  (min-width: 2560px) {
+    .start_title{
+        padding-top: 0px;
+        font-size: 400%;
+    }
+    main{
+        padding-top:160px;
+    }
+}

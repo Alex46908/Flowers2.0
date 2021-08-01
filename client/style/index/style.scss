@@ -1,0 +1,16 @@
+$osn_color: #2b2f42 ;
+/*Главная*/
+.start_title {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-top: 300px;
+  color: $osn_color;
+  position: absolute;
+  z-index: 100;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+}
+
+.background_img_1 {
+  width: 100%;
+}

@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/*Товары*/
+.product {
+    display: grid;
+    margin-bottom: 60px;
+}

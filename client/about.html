@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--Bootstrap-->
+    <title>About</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/index/style.css">
+    <link rel="stylesheet" href="style/about/style.css">
     <link rel="stylesheet" href="style/verstka.css">
-    <link rel="stylesheet" href="style/index/verstka.css">
+    <link rel="stylesheet" href="style/about/verstka.css">
     <link rel="stylesheet" href="./style/form.css">
-    <title>Flowers</title>
-
 </head>
 <body>
 <div id="form">
-<div class="background"></div>
+    <div class="background"></div>
     <div class="content">
         <form align="center">
             <img class="close" onclick="CloseForm()" src="./img/icon/close.svg">
@@ -32,16 +30,15 @@
         </form>
     </div>
 </div>
-
 <header>
     <p class="header_title">FLowers</p>
     <div class="header_content">
-        <a href="/"><p id="1s" class="start_section active">Главная</p></a>
-        <a href="/about"><p id="2s" >О Нас</p></a>
+        <a href="/"><p id="1s">Главная</p></a>
+        <a href="/about"><p id="2s" class="start_section active">О Нас</p></a>
         <a href="/product"><p id="3s">Товары</p>
             <a href="tel:+37529111111"><p id="4s">Позвонить</p></a>
             <div class="dropdown">
-                    <img id="dropdownMenuButton" class="btn basket bg-light"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./img/icon/basket.svg">
+                <img id="dropdownMenuButton" class="btn basket bg-light"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./img/icon/basket.svg">
                 <div class="dropdown-menu" id="basket" aria-labelledby="dropdownMenuButton">
 
                 </div>
@@ -49,15 +46,26 @@
 
     </div>
 </header>
-
 <main id="start">
-    <!--Раздел: Главная-->
-    <div class="start_title">
-        <div></div>
-        <p align="center">Для того чтобы люди радовались жизни, научились видеть красоту и ценили каждое мгновение природа подарила нам цветы. Нежные, ароматные, беззащитные и наполненные легкостью тонких лепестков, цветущие растения смотрят на нас с клумб и оранжерей, дарят положительные эмоции в любую погоду и время года.</p>
-    <div></div>
+<!--Раздел: О НАС-->
+<h2 id="about" class="section_title" align="center">О нас</h2>
+<!--Первый текст и первое фото-->
+<div class="about_info">
+    <div class="txt_about">
+        <p>Мы очень дорожим своей репутацией и отвечаем за качество наших букетов и своевременное исполнение заказа. Весь процесс от приема заказа до сборки букета происходит в одной точке в Москве. В нашем салоне все сотрудники давно знают друг друга, общаются лично, быстро решают все вопросы. Например, звонит клиент, просит срочно заменить открытку в заказе и добавить шоколадку, мы делаем это быстро. Или мы хотим предложить покупателю замену по сорту цветов в букете. Тогда администратор обязательно свяжется с заказчиком по телефону или электронной почте и обсудит все детали. Ведь нам важно, чтобы букет соответствовал ожиданиям и стал только приятным сюрпризом!</p>
     </div>
-    <img class="background_img_1" src="img/back/img1.jpg" alt="">
+    <img src="img/back/img2.1.jpg" class="img_about" alt="">
+</div>
+<!--Говнокод для упрощения себе жизни-->
+<h2 class="section_title" style="color: white;" >О нас</h2>
+<!--второе текст и второе фото-->
+<div class="about_info">
+    <img src="img/back/img2.2.jpg" class="img_about" alt="">
+    <div class="txt_about">
+        <p>Все флористы нашего салона имеют профессиональное образование и большой опыт работы. Высокий уровень наших мастеров позволяет нам создавать сложные, эксклюзивные букеты и композиции, которые вы можете увидеть в нашем онлайн-каталоге. Клиенты нашего салона всегда могут положиться на профессионализм и хороший вкус наших флористов, которые рады составить букет по индивидуальному заказу, выполнить все пожелания.Наши клиенты привыкли к качественным услугам и сервису нашей фирмы, часто просят нас помочь с поздравлениями их близких по другим городам. К сожалению, мы вынуждены им отказывать, потому что такое качество выполнения букетов, ассортимент цветов, четкость доставки мы можем обеспечить только в Москве, в нашем салоне.</p>
+    </div>
+
+</div>
     <h2 class="section_title" align="center">Почему выбирают нас?</h2>
     <iframe style="margin-left: calc((100% - 925px) / 2)" width="925" height="615" src="https://www.youtube.com/embed/Ek02duL-Sjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h2 id="product" class="section_title" align="center">Мы Здесь</h2>
@@ -94,10 +102,9 @@
 </footer>
 </body>
 </html>
-<script src="js/product/api_all_flowers.js"></script>
 <script src="js/basket.js"></script>
 <script src="js/form.js"></script>
-<!--Bootstrap-->
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

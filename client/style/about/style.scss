@@ -1,0 +1,16 @@
+$osn_color: #2b2f42 ;
+/*О нас*/
+.about_info {
+  display: grid;
+  .txt_about {
+    background: $osn_color ;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    p{
+      padding: 20px;
+    }
+  }
+  .img_about {
+    width: 100%;
+  }
+}

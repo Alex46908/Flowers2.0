@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--Bootstrap-->
+    <title>Product</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/index/style.css">
+    <link rel="stylesheet" href="style/product/style.css">
     <link rel="stylesheet" href="style/verstka.css">
-    <link rel="stylesheet" href="style/index/verstka.css">
+    <link rel="stylesheet" href="style/product/verstka.css">
     <link rel="stylesheet" href="./style/form.css">
-    <title>Flowers</title>
-
 </head>
 <body>
 <div id="form">
-<div class="background"></div>
+    <div class="background"></div>
     <div class="content">
         <form align="center">
             <img class="close" onclick="CloseForm()" src="./img/icon/close.svg">
@@ -32,16 +30,15 @@
         </form>
     </div>
 </div>
-
 <header>
     <p class="header_title">FLowers</p>
     <div class="header_content">
-        <a href="/"><p id="1s" class="start_section active">Главная</p></a>
+        <a href="/"><p id="1s" >Главная</p></a>
         <a href="/about"><p id="2s" >О Нас</p></a>
-        <a href="/product"><p id="3s">Товары</p>
+        <a href="/product"><p class="start_section active" id="3s">Товары</p>
             <a href="tel:+37529111111"><p id="4s">Позвонить</p></a>
             <div class="dropdown">
-                    <img id="dropdownMenuButton" class="btn basket bg-light"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./img/icon/basket.svg">
+                <img id="dropdownMenuButton" class="btn basket bg-light"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./img/icon/basket.svg">
                 <div class="dropdown-menu" id="basket" aria-labelledby="dropdownMenuButton">
 
                 </div>
@@ -49,19 +46,12 @@
 
     </div>
 </header>
-
 <main id="start">
-    <!--Раздел: Главная-->
-    <div class="start_title">
-        <div></div>
-        <p align="center">Для того чтобы люди радовались жизни, научились видеть красоту и ценили каждое мгновение природа подарила нам цветы. Нежные, ароматные, беззащитные и наполненные легкостью тонких лепестков, цветущие растения смотрят на нас с клумб и оранжерей, дарят положительные эмоции в любую погоду и время года.</p>
-    <div></div>
+    <!--Раздел: Товары-->
+    <h2 id="product" class="section_title" align="center">Товары</h2>
+    <!--Каталог-->
+    <div id="product_content" class="product">
     </div>
-    <img class="background_img_1" src="img/back/img1.jpg" alt="">
-    <h2 class="section_title" align="center">Почему выбирают нас?</h2>
-    <iframe style="margin-left: calc((100% - 925px) / 2)" width="925" height="615" src="https://www.youtube.com/embed/Ek02duL-Sjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h2 id="product" class="section_title" align="center">Мы Здесь</h2>
-    <iframe style="width:100%; margin-top:20px; margin-bottom:20px;" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bb5a0e1c20c7e40b837b6ec513f2678e7b54db702ce8ebecc558c2c4be304f3&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
 </main>
 <footer>
     <div class="footer_content">
@@ -97,11 +87,8 @@
 <script src="js/product/api_all_flowers.js"></script>
 <script src="js/basket.js"></script>
 <script src="js/form.js"></script>
-<!--Bootstrap-->
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-
-

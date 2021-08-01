@@ -1,0 +1,51 @@
+/*Вертска для телефонов */
+
+@media screen and  (min-width: 320px) {
+    .product {
+        grid-template-columns: 1fr;
+        width: 60%;
+        margin-left: 25%;
+
+    }
+    main{
+        padding-top:260px;
+    }
+}
+/*Верстка под планшеты*/
+
+@media  screen and  (min-width: 1024px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+        width: 70%;
+        margin-left: 18%;
+    }
+    main{
+        padding-top:140px;
+    }
+}
+/*Верстка под компы*/
+
+@media  screen and  (min-width: 1440px) {
+    .product {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        margin: 0;
+        padding-left: 5%;
+    }
+    main{
+        padding-top:200px;
+    }
+}
+/* Верстка под 4k мониторы*/
+
+@media  screen and  (min-width: 2560px) {
+    .product {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        margin: 0;
+        padding-left: 5%;
+    }
+    main{
+        padding-top:200px;
+    }
+}
