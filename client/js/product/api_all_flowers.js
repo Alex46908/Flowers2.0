@@ -10,15 +10,7 @@ fetch('/api/flowers')
   <div class="card-body">
     <h5 class="card-title">${flower.title}</h5>
     <p class="card-text">${flower.description}</p>
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Добавить в Корзину
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <h6 onclick="BasketSave('${flower.title}', false)" class="dropdown-item">Один цветок</h6>
-    <h6 onclick="BasketSave('${flower.title}', true)" class="dropdown-item">Букет</h6>
-  </div>
-</div>
+    <button onclick="BasketSave('${flower.title}')" class="btn btn-primary" type="button">Купить</button>
   </div>
 </div>`
         }

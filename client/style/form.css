@@ -1,0 +1,34 @@
+#form {
+    display: none;
+}
+
+.close{
+    width: 40px;
+    margin-left: 250px;
+}
+
+.form-group input{
+    width:70%; margin-left: 15%;
+}
+
+
+
+.background{
+    z-index: 102;
+    opacity: 0.5;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:white;
+}
+.content {
+    position: fixed;
+    z-index: 112;
+    height: 320px;
+    width: 320px;
+    background: white;
+    margin-top: calc(20% - 150px);
+    margin-left: calc(50% - 150px);
+    border-radius: 8px;
+    border: 1px solid black;
+}

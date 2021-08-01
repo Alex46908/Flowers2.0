@@ -8,24 +8,29 @@ a {
 }
 /*header*/
 header {
+  display: grid;
+  background: #2b2f42;
+  width: 100%;
   position: fixed;
   z-index: 101;
 
 
   .header_title {
   color: white;
-  font-size: 40px;
-  padding-top: 25px;
+    font-size: 400%;
   padding-left: 40px;
   }
 
   .header_content {
      display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     p{
       color: white;
       font-family: 'Oswald', sans-serif;
       margin-top: 30px;
+    }
+    .basket{
+      width: 60%;
+      margin-left: 15px;
     }
     .start_section {
       border: 1px solid white;
@@ -33,95 +38,16 @@ header {
 
     }
   }
-
-  .header_mail {
-
-    .header_mail_border {
-      background: white;
-      width: 1px;
-      height: 100%;
-    }
-    .mail {
-      color: white;
-      font-family: 'Dancing Script', cursive;
-      font-size: 20px;
-      margin-top: 36px;
-    }
-  }
 }
+
 /*main*/
-/*Главная*/
-.start_title {
-  margin-left: 160px;
-  margin-top: 300px;
-  color: $osn_color;
-  font-size: 30px;
-  position: absolute;
-  z-index: 100;
-  font-family: 'Oswald', sans-serif;
-}
-
-.background_img_1 {
-  width: 100%;
-  opacity:0.5;
-  -moz-opacity:0.8;
-  filter: alpha(opacity=80) black;
-  -khtml-opacity: 0.8;
-  background-color:#000;
-
-}
 /*Название секциий*/
 .section_title {
   color: $osn_color;
-  font-family: 'Dancing Script', cursive;
-
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+  font-size: 400%;
 }
-
-/*О нас*/
-.about_info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  .txt_about {
-    background: $osn_color ;
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-size: 20px;
-    p{
-      padding: 20px;
-    }
-  }
-  .img_about {
-    width: 100%;
-  }
-}
-
-
-/*Товары*/
-.product {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  .card {
-    border: 2px solid $osn_color ;
-    margin: 10px;
-    .card_img {
-      width: 100%;
-    }
-    .card_txt {
-      padding: 5px;
-      background: $osn_color ;
-      color: white;
-      font-family: 'Oswald', sans-serif;
-    }
-    .card_title {
-      font-size: 200%;
-    }
-    .card_description {
-      color: #cdcdcd;
-    }
-  }
-        }
-
 /*footer*/
 footer {
     background: $osn_color ;

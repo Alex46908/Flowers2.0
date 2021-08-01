@@ -11,7 +11,9 @@ function SendForm(){
     const phone = document.getElementById('phone').value;
     let content = '';
     for (let i = 0; i < localStorage.length - 1; i++) {
-        content += `${localStorage.getItem('' + i)},`
+        if (localStorage.getItem('' + i) !== null) {
+            content += `${localStorage.getItem('' + i)},`
+        }
     }
     fetch(`./api/create_user/${name}/${phone}/${content}`);
     localStorage.clear()

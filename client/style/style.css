@@ -1,0 +1,87 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*header*/
+header {
+    display: grid;
+    background: #2b2f42;
+    width: 100%;
+    position: fixed;
+    z-index: 101;
+}
+header .header_title {
+    color: white;
+    font-size: 400%;
+    padding-left: 40px;
+}
+header .header_content {
+    display: grid;
+}
+header .header_content p {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    margin-top: 30px;
+}
+header .header_content .basket {
+    width: 60%;
+    margin-left: 15px;
+}
+header .header_content .start_section {
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+/*main*/
+/*Название секциий*/
+.section_title {
+    color: #2b2f42;
+    font-family: "Oswald", sans-serif;
+    font-weight: 900;
+    font-size: 400%;
+}
+
+/*footer*/
+footer {
+    background: #2b2f42;
+    width: 100%;
+    /*Я*/
+}
+footer .footer_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+footer .footer_content .all_soc {
+    padding: 20px;
+    display: grid;
+    grid-auto-rows: 1fr 1fr;
+}
+footer .footer_content .all_soc .soc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+footer .footer_content .all_soc .soc .icon {
+    width: 40px;
+}
+footer .footer_content .all_soc .soc .link {
+    color: white;
+    margin-left: -80%;
+    margin-top: 10px;
+}
+footer .footer_content .pay {
+    width: 200px;
+    padding: 20px;
+    padding-top: 50px;
+}
+footer .author {
+    color: white;
+    font-size: 15px;
+    font-family: "Dancing Script", cursive;
+    padding: 5px;
+}
