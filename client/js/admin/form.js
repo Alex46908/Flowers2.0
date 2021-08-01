@@ -1,7 +1,8 @@
 function SendForm(){
     const mail = document.getElementById('exampleInputEmail1').value;
     const password = document.getElementById('exampleInputPassword1').value;
-    fetch(`/api/checkadmin/${mail}/${password}`)
+    fetch(`./api/checkadmin/${mail}/${password}`)
+        .catch((err) => alert(err + ' ' + `/api/checkadmin/${mail}/${password}`))
         .then((response) => response.json())
         .then((response) => {
             if(response[0].key !== undefined){
@@ -10,3 +11,4 @@ function SendForm(){
 
         });
 }
+
