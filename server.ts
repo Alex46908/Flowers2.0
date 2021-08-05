@@ -3,6 +3,7 @@ import * as path from 'path';
 import {Send} from './telegram';
 const app = express();
 import { Schema, model, connect } from 'mongoose';
+import {PullAllOperator} from "mongodb";
 const multer = require('multer')
 type Data = object[] | object | void;
 //MongoDB
@@ -20,6 +21,14 @@ interface IAdmin{
     password: string;
     key: string;
 }
+interface ILang{
+    lang: String;
+    form: Object,
+    header: Object;
+    index: Object;
+    about: Object;
+    product: Object;
+}
 const FlowersSchema = new Schema<IFlowers>({
     title:String,
     description:String,
@@ -33,6 +42,14 @@ const AdminSchema = new Schema<IAdmin>({
     mail: String,
     password: String,
     key: String
+});
+const LangSchema = new Schema<ILang>({
+    lang: String,
+    form: Object,
+    header: Object,
+    index: Object,
+    about: Object,
+    product: Object
 });
 class MongoConnect {
     private collection:string;
@@ -102,6 +119,12 @@ async function CheckAdminKey(key: string):Promise<Data>{
     let Admin:Data = await DB.Find({key: key});
     return Admin;
 }
+async function getAllStaticText(lang:string){
+    const DB = new MongoConnect('flowers', 'lang', LangSchema);
+    await DB.StartConnect();
+    const Data:Data = await DB.Find({lang: lang});
+    return Data;
+}
 //Server
 class NodeServer{
     private dirpath: string;
@@ -149,6 +172,7 @@ Server.Api('/api/checkadmin/:name/:password', 'return', CheckAdmin, ['name', 'pa
 Server.Api('/api/checkadminkey/:key', 'return', CheckAdminKey, ['key']);
 Server.Api('/api/flupdate/:title/:description/:img', {status: true}, Update, ['title', 'description', 'img']);
 Server.Api('/api/delcard/:img', {status: true}, DeleteCard, ['img']);
+Server.Api('/api/langstatic/:lang', 'return', getAllStaticText, ['lang']);
 
 Server.Page('', 'index.html');
 Server.Page('/product', 'product.html');

@@ -18,37 +18,43 @@
         <form align="center">
             <img class="close" onclick="CloseForm()" src="./img/icon/close.svg">
             <div class="form-group">
-                <label  for="name">ФИО</label>
-                <input class="form-control" id="name" aria-describedby="NameHelp" placeholder="ФИО">
-                <small id="NameHelp" class="form-text text-muted">Введите Фамилию Имя Отчество</small>
+                <label id="nametxt" for="name"></label>
+                <input class="form-control" id="name" aria-describedby="NameHelp">
+                <small id="NameHelp" class="form-text text-muted"></small>
             </div>
             <div class="form-group">
-                <label for="phone">Телефон</label>
-                <input type="phone" class="form-control" id="phone" placeholder="Телефон">
+                <label id="phonetxt" for="phone"></label>
+                <input type="phone" class="form-control" id="phone">
             </div>
-            <button type="submit" onclick="SendForm()" class="btn btn-primary">Подтвердить</button>
+            <button type="submit" onclick="SendForm()" id="sendbtn" class="btn btn-primary"></button>
         </form>
     </div>
 </div>
+
 <header>
     <p class="header_title">FLowers</p>
     <div class="header_content">
-        <a href="/"><p id="1s" >Главная</p></a>
-        <a href="/about"><p id="2s" >О Нас</p></a>
-        <a href="/product"><p class="start_section active" id="3s">Товары</p>
-            <a href="tel:+37529111111"><p id="4s">Позвонить</p></a>
+        <a href="/"><p id="title0" ></p></a>
+        <a href="/about"><p id="title1" ></p></a>
+        <a href="/product"><p id="title2" class="start_section active"></p>
+            <a href="tel:+37529111111"><p id="title3"></p></a>
             <div class="dropdown">
                 <img id="dropdownMenuButton" class="btn basket bg-light"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./img/icon/basket.svg">
                 <div class="dropdown-menu" id="basket" aria-labelledby="dropdownMenuButton">
 
                 </div>
             </div>
-
+            <nav aria-label="breadcrumb" class="lang">
+                <ol class="breadcrumb">
+                    <li  id="ru_lang"><b onclick="setLang('ru')">Русский</b></li>
+                    <li id="en_lang"><b onclick="setLang('en')">English</b></li>
+                </ol>
+            </nav>
     </div>
 </header>
 <main id="start">
     <!--Раздел: Товары-->
-    <h2 id="product" class="section_title" align="center">Товары</h2>
+    <h2 id="product" class="section_title" align="center"></h2>
     <!--Каталог-->
     <div id="product_content" class="product">
     </div>
@@ -84,10 +90,12 @@
 </footer>
 </body>
 </html>
+<script src="js/lang.js"></script>
+<script src="js/getText.js"></script>
 <script src="js/product/api_all_flowers.js"></script>
 <script src="js/basket.js"></script>
 <script src="js/form.js"></script>
-
+<script src="js/product/getText.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

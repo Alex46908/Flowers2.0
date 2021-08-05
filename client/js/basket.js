@@ -6,9 +6,10 @@ function BasketContent(){
             el.innerHTML += `<h6 class="dropdown-item">${localStorage.getItem('' + i)}<span onclick="BasketDelete(${i})"><img src="./img/icon/delete.svg" alt=""></span></h6>`
         }
     }
-    el.innerHTML += `<h6 class="dropdown-item bg-dark text-white" onclick="OpenForm()" >Купить</h6>`;
+    el.innerHTML += `<h6 class="dropdown-item bg-dark text-white" onclick="OpenForm()" id="byebtn"></h6>`;
 }
 BasketContent();
+getTextAll();
 function BasketSave(flname){
     if(localStorage.getItem('length') == null) {
         localStorage.setItem('length', '0')
@@ -18,6 +19,7 @@ function BasketSave(flname){
 
     localStorage.setItem('length', +localStorage.getItem('length') + 1);
     BasketContent()
+    getTextAll()
 }
 function BasketDelete(delete_value){
     while(delete_value < localStorage.getItem('length') - 1){
@@ -28,4 +30,5 @@ function BasketDelete(delete_value){
     localStorage.removeItem(localStorage.getItem('length')-1);
     localStorage.setItem('length', +localStorage.getItem('length') - 1)
     BasketContent()
+    getTextAll()
 }
