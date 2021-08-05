@@ -8,8 +8,10 @@ const multer = require('multer')
 type Data = object[] | object | void;
 //MongoDB
 interface IFlowers {
-    title:string;
-    description:string;
+    titleRu:string;
+    titleEn:string;
+    descriptionRu:string;
+    descriptionEn:string;
     img: string;
 }
 interface IUser{
@@ -30,8 +32,10 @@ interface ILang{
     product: Object;
 }
 const FlowersSchema = new Schema<IFlowers>({
-    title:String,
-    description:String,
+    titleRu:String,
+    titleEn:String,
+    descriptionRu:String,
+    descriptionEn:String,
     img: String
 });
 const UserSchema = new Schema<IUser>({
@@ -81,16 +85,16 @@ async function DeleteCard(img:string){
     await DB.StartConnect();
     await DB.Delete({img: img})
 }
-async function CreateCard(title:string, description:string, img:string){
+async function CreateCard(titleRu:string, titleEn:string, descriptionRu:string, descriptionEn:string, img:string){
     const DB = new MongoConnect('flowers', 'flowers', FlowersSchema);
     await DB.StartConnect();
-    await DB.Create({title: title, description: description, img: img})
+    await DB.Create({titleRu: titleRu, titleEn: titleEn, descriptionRu: descriptionRu, descriptionEn: descriptionEn, img: img})
 }
-async function Update(title:string, description:string, img:string){
+async function Update(titleRu:string, titleEn:string, descriptionRu:string, descriptionEn:string, img:string){
     const DB = new MongoConnect('flowers', 'flowers', FlowersSchema);
     await DB.StartConnect();
-    await DB.Delete({img: img})
-    await DB.Create({title: title, description: description, img:img})
+    await DB.Delete({img: img});
+    await DB.Create({titleRu: titleRu, titleEn: titleEn, descriptionRu: descriptionRu, descriptionEn: descriptionEn, img: img})
 }
 async function DBConnect():Promise<Data> {
     const DB = new MongoConnect('flowers', 'flowers', FlowersSchema);
@@ -163,14 +167,14 @@ const Server = new NodeServer('client');
 
 app.use(multer({dest:"./client/img/card"}).single("filedata"));
 app.post("/admin_manager", function (req:any, res:any, next) {
-    CreateCard(req.body.title, req.body.description, req.file.filename);
+    CreateCard(req.body.titleRu, req.body.titleEn, req.body.descriptionRu,req.body.descriptionEn, req.file.filename);
     res.sendFile(path.resolve(__dirname, 'client', 'admin_manager.html'))
 });
 Server.Api('/api/flowers', 'return', DBConnect);
 Server.Api('/api/create_user/:full_name/:phone/:content', {status: true}, CreateUser, ['full_name', 'phone', 'content']);
 Server.Api('/api/checkadmin/:name/:password', 'return', CheckAdmin, ['name', 'password']);
 Server.Api('/api/checkadminkey/:key', 'return', CheckAdminKey, ['key']);
-Server.Api('/api/flupdate/:title/:description/:img', {status: true}, Update, ['title', 'description', 'img']);
+Server.Api('/api/flupdate/:titleRu/:titleEn/:descriptionRu/:descriptionEn/:img', {status: true}, Update, ['titleRu', 'titleEn', 'descriptionRu', 'descriptionEn', 'img']);
 Server.Api('/api/delcard/:img', {status: true}, DeleteCard, ['img']);
 Server.Api('/api/langstatic/:lang', 'return', getAllStaticText, ['lang']);
 

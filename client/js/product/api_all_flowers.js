@@ -4,14 +4,26 @@ fetch('/api/flowers')
     .then((response) => response.json())
     .then((json) => {
         for ( let flower of json ) {
-            product_el.innerHTML += `
+            if (localStorage.getItem('lang') == 'ru'){
+                product_el.innerHTML += `
     <div  class="card" style="width: 80%; margin-top: 10px; margin-bottom: 10px;">
   <img class="card-img-top" src="./img/card/${flower.img}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">${flower.title}</h5>
-    <p class="card-text">${flower.description}</p>
-    <button onclick="BasketSave('${flower.title}')" class="btn btn-primary" type="button">Купить</button>
+    <h5 class="card-title">${flower.titleRu}</h5>
+    <p class="card-text">${flower.descriptionRu}</p>
+    <button onclick="BasketSave('${flower.titleRu}')" class="btn btn-primary" type="button">Купить</button>
   </div>
 </div>`
+            }else if (localStorage.getItem('lang') == 'en'){
+                product_el.innerHTML += `
+    <div  class="card" style="width: 80%; margin-top: 10px; margin-bottom: 10px;">
+  <img class="card-img-top" src="./img/card/${flower.img}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">${flower.titleEn}</h5>
+    <p class="card-text">${flower.descriptionEn}</p>
+    <button onclick="BasketSave('${flower.titleEn}')" class="btn btn-primary" type="button">Купить</button>
+  </div>
+</div>`
+            }
         }
     });

@@ -15,13 +15,22 @@ function Content(){
   <img class="card-img-top" src="./img/card/${flower.img}" alt="Card image cap">
   <div class="card-body">
     <div class="form-group">
-    <input value="${flower.title}" class="form-control" id="${flower.img}title" placeholder="Название">
+    <input value="${flower.titleRu}" class="form-control" id="${flower.img}titleRu" placeholder="Название (Ru)">
+  </div>
+  <div class="form-group">
+    <input value="${flower.titleEn}" class="form-control" id="${flower.img}titleEn" placeholder="Название (En)">
   </div>
     <div class="input-group">
   <div class="input-group-prepend">
-    <span class="input-group-text">Описание</span>
+    <span class="input-group-text">Описание (Ru)</span>
   </div>
-  <textarea id="${flower.img}description" class="form-control" aria-label="Описание">${flower.description}</textarea>
+  <textarea id="${flower.img}descriptionRu" class="form-control" aria-label="Описание">${flower.descriptionRu}</textarea>
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Описание (En)</span>
+  </div>
+  <textarea id="${flower.img}descriptionEn" class="form-control" aria-label="Описание">${flower.descriptionEn}</textarea>
 </div>
 <button onclick="Update('${flower.img}')" style="margin-top: 15px;" type="button" class="btn btn-primary">Сохранить</button>
 <button onclick="Delete('${flower.img}')" style="margin-top: 15px;" type="button" class="btn btn-danger"><img src="./img/icon/trash.svg" alt=""></button>
@@ -36,13 +45,22 @@ function Content(){
             </div>
         <div class="card-body">
             <div class="form-group">
-                <input name="title" class="form-control" placeholder="Название">
+                <input name="titleRu" class="form-control" placeholder="Название (Ru)">
+            </div>
+            <div class="form-group">
+                <input name="titleEn" class="form-control" placeholder="Название (En)">
             </div>
             <div class="input-group">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Описание</span>
+                    <span class="input-group-text">Описание (Ru)</span>
                 </div>
-                <textarea name="description" class="form-control" aria-label="Описание"></textarea>
+                <textarea name="descriptionRu" class="form-control" aria-label="Описание (Ru)"></textarea>
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Описание (En)</span>
+                </div>
+                <textarea name="descriptionEn" class="form-control" aria-label="Описание (En)"></textarea>
             </div>
             <button  style="margin-top: 15px;" type="submit" class="btn btn-primary">Создать</button>
         </div>
