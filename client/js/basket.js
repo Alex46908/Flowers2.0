@@ -24,7 +24,6 @@ function BasketSave(flname){
 function BasketDelete(delete_value){
     while(delete_value < localStorage.getItem('length') - 1){
         localStorage.setItem(delete_value, localStorage.getItem(`${delete_value + 1}`))
-        console.log('alex')
         delete_value++
     }
     localStorage.removeItem(localStorage.getItem('length')-1);

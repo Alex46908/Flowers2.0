@@ -11,7 +11,7 @@ fetch('/api/flowers')
   <div class="card-body">
     <h5 class="card-title">${flower.titleRu}</h5>
     <p class="card-text">${flower.descriptionRu}</p>
-    <button onclick="BasketSave('${flower.titleRu}')" class="btn btn-primary" type="button">Купить</button>
+    <button onclick="BasketSave('${flower.titleRu}')" class="btn btn-primary PBuyBtn" type="button"></button>
   </div>
 </div>`
             }else if (localStorage.getItem('lang') == 'en'){
@@ -21,7 +21,7 @@ fetch('/api/flowers')
   <div class="card-body">
     <h5 class="card-title">${flower.titleEn}</h5>
     <p class="card-text">${flower.descriptionEn}</p>
-    <button onclick="BasketSave('${flower.titleEn}')" class="btn btn-primary" type="button">Купить</button>
+    <button onclick="BasketSave('${flower.titleEn}')" class="btn btn-primary PBuyBtn" type="button"></button>
   </div>
 </div>`
             }
