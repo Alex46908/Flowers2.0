@@ -9,7 +9,7 @@ type Data = object[] | object;
 
 abstract class MongoMethods {
     private collection:string;
-    public Model:any;
+    private Model:any;
     private DBName: string;
 
     constructor(DBName:string, collection:string, Schema:any){
