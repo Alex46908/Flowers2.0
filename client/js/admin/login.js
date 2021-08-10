@@ -11,7 +11,7 @@ function Content(){
             .then((json) => {
                 for ( let flower of json ) {
                     content.innerHTML += `
-    <div class="card" style="width: 80%; margin-top: 10px; margin-bottom: 10px;">
+    <div class="card">
   <img class="card-img-top" src="./img/card/${flower.img}" alt="Card image cap">
   <div class="card-body">
     <div class="form-group">
@@ -32,16 +32,16 @@ function Content(){
   </div>
   <textarea id="${flower.img}descriptionEn" class="form-control" aria-label="Описание">${flower.descriptionEn}</textarea>
 </div>
-<button onclick="Update('${flower.img}')" style="margin-top: 15px;" type="button" class="btn btn-primary">Сохранить</button>
-<button onclick="Delete('${flower.img}')" style="margin-top: 15px;" type="button" class="btn btn-danger"><img src="./img/icon/trash.svg" alt=""></button>
+<button onclick="Update('${flower.img}')" type="button" class="btn btn-primary ">Сохранить</button>
+<button onclick="Delete('${flower.img}')" type="button" class="btn btn-danger"><img src="./img/icon/trash.svg" alt=""></button>
   </div>
 </div>`
                 }
-                content.innerHTML += `<div class="card" style="width: 80%; margin-top: 10px; margin-bottom: 10px;">
+                content.innerHTML += `<div class="card" >
         <form id="filef" method="post" enctype="multipart/form-data">
             <div align="center" class="form-group">
                 <label for="exampleFormControlFile1">Выберите фото цветка (512x512)</label>
-                <input style="width: 60%;" type="file" class="form-control-file" id="exampleFormControlFile1" name="filedata" />
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="filedata" />
             </div>
         <div class="card-body">
             <div class="form-group">
@@ -62,7 +62,7 @@ function Content(){
                 </div>
                 <textarea name="descriptionEn" class="form-control" aria-label="Описание (En)"></textarea>
             </div>
-            <button  style="margin-top: 15px;" type="submit" class="btn btn-primary">Создать</button>
+            <button type="submit" class="btn btn-primary">Создать</button>
         </div>
         </form>
     </div>`

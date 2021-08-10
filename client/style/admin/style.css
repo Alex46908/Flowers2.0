@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.btn {
+    margin-top: 15px;
+}
+.form-control-file{
+    width: 60%;
+}
+.form-control{
+    width:50%;
+}

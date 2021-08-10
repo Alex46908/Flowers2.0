@@ -6,7 +6,7 @@ fetch('/api/flowers')
         for ( let flower of json ) {
             if (localStorage.getItem('lang') == 'ru'){
                 product_el.innerHTML += `
-    <div  class="card" style="width: 80%; margin-top: 10px; margin-bottom: 10px;">
+    <div  class="card">
   <img class="card-img-top" src="./img/card/${flower.img}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">${flower.titleRu}</h5>
@@ -16,7 +16,7 @@ fetch('/api/flowers')
 </div>`
             }else if (localStorage.getItem('lang') == 'en'){
                 product_el.innerHTML += `
-    <div  class="card" style="width: 80%; margin-top: 10px; margin-bottom: 10px;">
+    <div  class="card">
   <img class="card-img-top" src="./img/card/${flower.img}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">${flower.titleEn}</h5>
