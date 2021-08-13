@@ -1,5 +1,5 @@
-# Floewrs 2.0
-##### Сайт (NodeJS + Express + HTML + CSS + SCSS + TypeScript + JavaScript)
+# Flowers 2.0
+##### Site (NodeJS + Express + HTML + CSS + SCSS + TypeScript + JavaScript)
 - **[js](./)**
     - **[basket.js](./basket.js) (Basket Script)**
     - **[form.js](./form.js) (Form Script)**

@@ -1,5 +1,5 @@
-# Floewrs 2.0
-##### Сайт (NodeJS + Express + HTML + CSS + SCSS + TypeScript + JavaScript)
+# Flowers 2.0
+##### Site (NodeJS + Express + HTML + CSS + SCSS + TypeScript + JavaScript)
 - **[ts](./)**
     - **[Mongo.ts](./Mongo.ts) (Classes for work with MongoDB)**
     - **[NodeServer.ts](./NodeServer.ts) (Class for work with Node.js)**

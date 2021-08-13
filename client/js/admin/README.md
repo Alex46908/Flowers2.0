@@ -1,5 +1,5 @@
-# Floewrs 2.0
-##### Сайт (NodeJS + Express + HTML + CSS + SCSS + TypeScript + JavaScript)
+# Flowers 2.0
+##### Site (NodeJS + Express + HTML + CSS + SCSS + TypeScript + JavaScript)
 - **[admin](./)**
     - **[card.js](./card.js) (Delete and Update Cards Script)**
     - **[form.js](./form.js) (Crete New Card Script)**
