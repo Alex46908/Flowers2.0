@@ -2,10 +2,12 @@ import express from "express";
 import * as path from "path";
 import multer from "multer";
 
-import {MongoFlowersDB, MongoUsersDB, MongoAdminDB, MongoLangDB} from './Mongo';
+import {MongoFlowersDB} from './mongo/MongoFlowersDB';
+import {MongoUsersDB} from './mongo/MongoUsersDB';
+import {MongoAdminDB} from './mongo/MongoAdminDB';
+import {MongoLangDB} from './mongo/MongoLangDB';
 
 const app = express();
-type Data = object[] | object ;
 
 const MongoFlowers = new MongoFlowersDB();
 const MongoUsers = new MongoUsersDB();
