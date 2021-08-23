@@ -1,4 +1,4 @@
-# Flowers 2.0
+# Flowers (Version: 2.0)
 ##### Site (NodeJS + Express + HTML + CSS + SCSS + TypeScript + JavaScript)
 - **[js](./)**
     - **[basket.js](./basket.js) (Basket Script)**
